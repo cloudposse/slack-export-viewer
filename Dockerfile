@@ -9,5 +9,4 @@ COPY . /
 
 EXPOSE 5000
 
-RUN chmod 755 entrypoint.sh
 ENTRYPOINT ["sh", "/entrypoint.sh"]

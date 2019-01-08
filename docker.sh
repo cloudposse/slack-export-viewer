@@ -10,6 +10,11 @@ then
     echo "Build image"
     docker build -t $IMAGE_NAME .
 
+elif [ "$1" = "rmi"  ]
+then
+    echo "Remove image"
+    docker rmi $IMAGE_NAME
+
 elif [ "$1" = "run" ]
 then
     # echo "Run container with EXPORT_PATH=$2 and EXPORT_FILE=$3"
@@ -18,7 +23,8 @@ then
     # docker run -v $2:/usr/src/slack-export-viewer -e EXPORT_PATH=$2 -e EXPORT_FILE=$3 -i -t -d $IMAGE_NAME
     # docker run  $IMAGE_NAME $2
     # docker run --rm -v $2:/usr/src/slack-export-viewer --name $CONTAINER_NAME $IMAGE_NAME
-    docker run --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
+    # docker run -v $2:/usr/src/slack-export-viewer --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
+    docker run -v $2:/usr/src/slack-export-viewer -p 5000:5000 --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
 
 elif [ "$1" = "log" ]
 then

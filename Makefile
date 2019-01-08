@@ -25,7 +25,7 @@ push:
 
 ## Start the docker container
 run:
-	@echo "Run container with EXPORT_PATH=$2 and EXPORT_FILE=$3"
+	@echo "Starting container with EXPORT_PATH=$2 and EXPORT_FILE=$3"
 	docker run -p 5000:5000 -v $(EXPORT_PATH):$(DOCKER_VOLUME) \
 		--rm --name $(DOCKER_CONTAINER) -it $(DOCKER_IMAGE_NAME) $(EXPORT_PATH) $(EXPORT_FILE)
 

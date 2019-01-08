@@ -24,7 +24,7 @@ then
     # docker run  $IMAGE_NAME $2
     # docker run --rm -v $2:/usr/src/slack-export-viewer --name $CONTAINER_NAME $IMAGE_NAME
     # docker run -v $2:/usr/src/slack-export-viewer --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
-    docker run -v $2:/usr/src/slack-export-viewer -p 5000:5000 --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
+    docker run -p 5000:5000 -v $2:/usr/src/slack-export-viewer --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
 
 elif [ "$1" = "log" ]
 then

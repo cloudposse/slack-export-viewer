@@ -8,6 +8,8 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 COPY . .
 COPY . /
 
+EXPOSE 5000
+
 # COPY entrypoint.sh ./entrypoint.sh
 
 # ENV EXPORT_PATH ./
@@ -20,3 +22,4 @@ COPY . /
 COPY entrypoint.sh /
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["sh", "/entrypoint.sh"]
+CMD [ "-b 0.0.0.0" ]

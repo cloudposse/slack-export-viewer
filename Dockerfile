@@ -22,4 +22,3 @@ EXPOSE 5000
 COPY entrypoint.sh /
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["sh", "/entrypoint.sh"]
-CMD [ "-b 0.0.0.0" ]

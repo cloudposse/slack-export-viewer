@@ -17,13 +17,7 @@ then
 
 elif [ "$1" = "run" ]
 then
-    # echo "Run container with EXPORT_PATH=$2 and EXPORT_FILE=$3"
-    # docker run -d --rm -v $2:/usr/src/slack-export-viewer -e EXPORT_PATH=$2 -e EXPORT_FILE=$3 --name $CONTAINER_NAME -i -t -d $IMAGE_NAME
-    # docker run -v $2:/usr/src/slack-export-viewer -e EXPORT_PATH=$2 -e EXPORT_FILE=$3 --name $CONTAINER_NAME -i -t -d $IMAGE_NAME
-    # docker run -v $2:/usr/src/slack-export-viewer -e EXPORT_PATH=$2 -e EXPORT_FILE=$3 -i -t -d $IMAGE_NAME
-    # docker run  $IMAGE_NAME $2
-    # docker run --rm -v $2:/usr/src/slack-export-viewer --name $CONTAINER_NAME $IMAGE_NAME
-    # docker run -v $2:/usr/src/slack-export-viewer --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
+    echo "Run container with EXPORT_PATH=$2 and EXPORT_FILE=$3"
     docker run -p 5000:5000 -v $2:/usr/src/slack-export-viewer --rm --name $CONTAINER_NAME -it $IMAGE_NAME $2 $3
 
 elif [ "$1" = "log" ]

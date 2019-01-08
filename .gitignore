@@ -61,6 +61,7 @@ docs/_build/
 
 # PyBuilder
 target/
+/venv
 
 # Created by .ignore support plugin (hsz.mobi)
 

@@ -90,13 +90,25 @@ Commands:
   clean  Cleans up any temporary files (including...
 ```
 
+## Makefile Targets
+```
+Available targets:
+
+  init                                Build harness init
+  all                                 Initialize, build docker container and run shell
+  build                               Build docker image
+  push                                Push docker image to registry
+  run                                 Start the docker container
+  delete                              Delete images
+
+```
+
 ## Docker
 
-There is now a docker image included as well.
-
 ```bash
-./docker.sh build
-./docker.sh run /path/to/export/folder export_file.zip
+make init
+make build
+make run EXPORT_PATH=/path/to/export/file EXPORT_FILE=export.zip 
 ```
 
 ### Examples

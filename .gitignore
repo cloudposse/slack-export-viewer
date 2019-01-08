@@ -66,3 +66,8 @@ target/
 
 # IDE
 .idea
+*.iml
+
+# Build harness
+**/.build-harness
+**/build-harness

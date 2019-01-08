@@ -10,15 +10,11 @@ COPY . /
 
 EXPOSE 5000
 
-# COPY entrypoint.sh ./entrypoint.sh
-
 # ENV EXPORT_PATH ./
 # ENV EXPORT_FILE export.zip
 
 # CMD ["sh", "-c", "python3", "./app.py --archive $EXPORT_PATH/$EXPORT_FILE" ]
 # CMD ["./app.py --archive $EXPORT_PATH/$EXPORT_FILE" ]
 
-# ENTRYPOINT [ "./entrypoint.sh" ]
-COPY entrypoint.sh /
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["sh", "/entrypoint.sh"]

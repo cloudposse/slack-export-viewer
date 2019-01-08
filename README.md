@@ -90,6 +90,15 @@ Commands:
   clean  Cleans up any temporary files (including...
 ```
 
+## Docker
+
+There is now a docker image included as well.
+
+```bash
+./docker.sh build
+./docker.sh run /path/to/export/folder export_file.zip
+```
+
 ### Examples
 
 ```

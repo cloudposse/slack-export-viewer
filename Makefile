@@ -1,4 +1,4 @@
-export DOCKER_CONTAINER ?= slack.viewer
+export DOCKER_CONTAINER ?= slack-viewer
 export DOCKER_ORG ?= cloudposse
 export DOCKER_IMAGE ?= $(DOCKER_ORG)/$(DOCKER_CONTAINER)
 export DOCKER_TAG ?= latest
